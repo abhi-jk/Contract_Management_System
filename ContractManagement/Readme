@@ -1,0 +1,36 @@
+Online Contact Management System
+The Online Contact Management System is a web application that allows users to manage their contacts. It provides endpoints for adding, retrieving, updating, and deleting user information. The system uses an H2 database for data storage and incorporates logging using AOP.
+
+Features:
+1.  User Management:
+    1.1 Add a new user with details such as name, phone number, and email.
+    1.2 Retrieve user details by user ID.
+    1.3 Update user information.
+    1.4 Delete a user.
+2.  Database:
+    2.1 Utilizes the H2 in-memory database for storing user data.
+    2.2 Automatically creates and updates the database schema.
+3.  Logging:
+    3.1 Logs method entry and exit using AOP.
+    3.2 Provides insights into system behavior during development and debugging.
+Endpoints:
+1.  Add User (POST):
+    1.1 Endpoint: /api/v1/users
+    1.2 Request body: JSON representation of a user
+    1.3 Example:
+        JSON
+        {
+        "name": "Sreelekshmi R",
+        "phoneNumber": "94738467578",
+        "email": "sreelekshmir@gmail.com"
+        }
+2.  Get User Details (GET):
+    2.1 Endpoint: /api/v1/users/{id}
+    2.2 Example: /api/v1/users/1
+3.  Update User (PUT):
+    3.1 Endpoint: /api/v1/users/{id}
+    3.2 Example: /api/v1/users/1
+    3.3 Request body: Updated user details
+4.  Delete User (DELETE):
+    4.1 Endpoint: /api/v1/users/{id}
+    4.2 Example: /api/v1/users/1
